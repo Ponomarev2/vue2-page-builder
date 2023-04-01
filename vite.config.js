@@ -6,6 +6,7 @@ import vue2 from '@vitejs/plugin-vue2'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/vue2-page-builder/',
   plugins: [
     vue2(),
     legacy({
@@ -14,7 +15,6 @@ export default defineConfig({
     })
   ],
   resolve: {
-    base: '/vue2-page-builder/',
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
